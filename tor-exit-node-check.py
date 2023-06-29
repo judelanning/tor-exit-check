@@ -8,16 +8,12 @@ def get_exit_node_ips():
 
 def check_ip(ip):
     if ip in get_exit_node_ips():
-        return True
+        print("Yes, " + ip + " is a Tor exit node.")
     else:
-        return False
+        print("No, " + ip + " is not a Tor exit node.")
 
 def manual_check():
     ip_to_check = input("Enter the IP address you would like to check: ")
-    
-    if check_ip(ip_to_check) == True:
-        print("Yes, " + ip_to_check + " is a Tor exit node.")
-    else:
-        print("No, " + ip_to_check + " is not a Tor exit node.")
+    check_ip(ip_to_check)
 
 manual_check()
