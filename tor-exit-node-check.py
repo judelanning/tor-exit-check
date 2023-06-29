@@ -10,8 +10,8 @@ def manual_check():
     ip_to_check = input("Enter the IP address you would like to check: ")
     
     if ip_to_check in get_exit_node_ips():
-        print("True")
+        print("Yes, " + ip_to_check + " is a Tor exit node.")
     else:
-        print("False")
+        print("No, " + ip_to_check + " is not a Tor exit node.")
 
 manual_check()
